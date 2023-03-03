@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Layout</title>
+    <link rel="stylesheet" href="CSS/StyleSheet1.css">
+    <link rel="stylesheet" href="CSS/StyleSheet_Menu.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="header">
+            <h1>Hotbeans</h1>
+
+            <ul>
+                <li><a class="active" id="op_Home">Home</a></li>
+                <li><a id="op_Contact">Contact</a></li>
+                <li><a id="op_Teams">Our Teams</a></li>
+                <li><a id="op_joinUs">join Us</a></li>
+                  
+                <li style="float:right"><a id="op_About">About</a></li>
+            </ul>
+        </div>
+
+        <div id="home_section" class="section">
+            <center>
+                <h2>Main page </h2>
+                <img src="images/sdd.png" alt="Company Picture" width="300" height="300">
+            </center>
+            <br /><br /><br /><br />
+            <p>&emsp;&nbsp;&nbsp;This the page were you can learn about Hotbeans and about web development</p>
+            <p>&emsp;hotbeans provides one of the best services for the learners and allow them to have the best experience  </p>
+           
+        </div>
+
+
+        <div id="about_section" class="section" hidden>
+            <center>
+                <h2>About</h2>
+                <img src="images/tt.pngp" alt="Company Picture" width="350" height="350">
+            </center>
+
+            <p>&emsp;&nbsp;&nbsp;hott beans provide the right information  </p>
+           
+
+        </div>
+
+        <div id="Teams_section" class="section" hidden>
+            <center>
+                <h2>Our Teams</h2>
+                <table>
+                    <tr>
+                        <td><img src="images/mia.jfif" alt="Company Picture" width="200" height="200"></td>
+                        <td><img src="images/tt.jfif" alt="Company Picture" width="200" height="200"></td>
+                        <td><img src="images/ss.jfif" alt="Company Picture" width="200" height="200"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p> Mia Mithu   </p>
+                        </td>
+                        <td>
+                            <p>Mia Kalu </p>
+                        </td>
+                        <td>
+                            <p>Mia Chitu </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Mia mithu could be small but his brain is &nbsp; &nbsp;</p>
+                            <p> very big thats why is the ceo of hotbeans &nbsp; &nbsp;</p>
+                            
+                        </td>
+                        
+                        
+                        
+                        <td>
+                            <p>Mia Kalu is one of our new employees but &nbsp; &nbsp; </p>
+                            <p>doesnt stop him to manage most od our operations &nbsp; &nbsp; </p>
+                        </td>
+                        
+                        
+                        
+                        <td>
+                            <p>Mia chitu is one of our best employees as he manages he leaners </p>
+                            <p>as his comunication is the best as he know how to interact with different type of people </p>
+                           
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+
+        <div id="contact_section" class="section" hidden>
+            <center>
+                <h2>Contact us</h2>
+            </center>
+            <form action="/action_page.php" style="justify-content:center">
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value=""><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="mes">Message:</label><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<textarea id="mes" name="mes" rows="4" cols="50"></textarea><br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="joinUs_section" class="section" hidden>
+            <center>
+                <h2>Join us</h2>
+            </center>
+            <form action="/action_page.php">
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value=""><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="email">Email:</label>
+                <input type="text" id="email" name="email" value=""><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<label for="notes">Notes:</label><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;<b>Upload Your CV: </b>
+                <input type="file"
+                       id="file1"
+                       name="upload">
+                <br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="submit" value="Submit">
+            </form>          
+            
+        </div>
+
+        <div class="footer">
+            <p>copyright &copy; Company Y</p>
+        </div>
+
+    </div>
+    
+    <script type="text/javascript">
+        var _about_section = document.getElementById('about_section');
+        var _home_section = document.getElementById('home_section');
+        var _contact_section = document.getElementById('contact_section');
+        var _joinUs_section = document.getElementById('joinUs_section');
+        var _Teams_section = document.getElementById('Teams_section');
+
+
+        document.getElementById('op_joinUs').onclick = function () {
+            _about_section.hidden = true;
+            _home_section.hidden = true;
+            _contact_section.hidden = true;
+            _joinUs_section.hidden = false;
+            _Teams_section.hidden = true;
+        }
+
+        document.getElementById('op_Teams').onclick = function () {
+            _about_section.hidden = true;
+            _home_section.hidden = true;
+            _contact_section.hidden = true;
+            _joinUs_section.hidden = true;
+            _Teams_section.hidden = false;
+        }
+
+        document.getElementById('op_About').onclick = function () {
+            _about_section.hidden = false;
+            _home_section.hidden = true;
+            _contact_section.hidden = true;
+            _joinUs_section.hidden = true;
+            _Teams_section.hidden = true;
+        }
+
+        document.getElementById('op_Contact').onclick = function () {
+            _about_section.hidden = true;
+            _home_section.hidden = true;
+            _contact_section.hidden = false;
+            _joinUs_section.hidden = true;
+            _Teams_section.hidden = true;
+        }
+
+        document.getElementById('op_Home').onclick = function () {
+            _about_section.hidden = true;
+            _home_section.hidden = false;
+            _contact_section.hidden = true;
+            _joinUs_section.hidden = true;
+            _Teams_section.hidden = true;
+        }
+    </script>
+</body>
+</html>
